@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9377194845346df8813a29c30c3acd6" Name="Diagram1" >
+        <EntityTypeShape EntityType="MeuDB.Cliente" Width="1.5" PointX="1.875" PointY="0.625" />
+        <EntityTypeShape EntityType="MeuDB.Endereco" Width="1.5" PointX="4.5" PointY="0.625" />
+        <AssociationConnector Association="MeuDB.ClienteEndereco" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
