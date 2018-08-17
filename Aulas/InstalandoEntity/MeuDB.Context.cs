@@ -25,5 +25,7 @@ namespace InstalandoEntity
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Cliente> ClienteSet { get; set; }
+        public virtual DbSet<Endereco> EnderecoSet { get; set; }
     }
 }
