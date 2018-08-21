@@ -20,7 +20,7 @@ namespace EntityFDataBaseFirst.Controllers {
 
         Person BuscarPorId(int id) {
             AdventureWorks2016Entities contexto = new AdventureWorks2016Entities();
-            return contexto.Person.Find(id);//O metodo Find só faz busca pela chave Primaria, ou seja, não busca se a cgave for String
+            return contexto.Person.Find(id);//O metodo Find só faz busca pela chave Primaria, ou seja, não busca se a chave for String
         }
 
         void DeletePerson(int id) {
