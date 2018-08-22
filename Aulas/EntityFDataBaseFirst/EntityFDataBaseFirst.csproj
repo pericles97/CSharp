@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="Controllers\PersonController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="CountryRegionCurrency.cs">
       <DependentUpon>Modelos.tt</DependentUpon>
     </Compile>

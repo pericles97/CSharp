@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityFDataBaseFirst.Controllers {
     class PersonController {
-
+        AdventureWorks2016Entities contexto = new AdventureWorks2016Entities();
         void Inserir(Person p) {
             AdventureWorks2016Entities contexto = new AdventureWorks2016Entities();
             contexto.Person.Add(p);
@@ -31,6 +31,34 @@ namespace EntityFDataBaseFirst.Controllers {
             }
         }
 
+        void UpdatePerson(int id, Person novoDadosPerson) {
+            Person personAntigo = BuscarPorId(id);
+
+            if (true) {
+                personAntigo.FirstName = novoDadosPerson.FirstName;
+                personAntigo.LastName = novoDadosPerson.LastName;
+                personAntigo.Title = novoDadosPerson.Title;
+
+                AdventureWorks2016Entities contexto = new AdventureWorks2016Entities();
+                contexto.Entry(personAntigo).State = System.Data.Entity.EntityState.Modified;
+                contexto.SaveChanges();
+            }
+        }
+
+        List<Person> BuscarPorFirstName(string firstName) {
+            AdventureWorks2016Entities contexto = new AdventureWorks2016Entities();
+            //LINQ - Suporte para QUERYES SQL dentro do C#
+            //https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
+
+            //select * from person
+            /*var lista = from p in contexto.Person select p;*/
+
+            //select * from person.firstName
+            var lista = from p in contexto.Person where p.FirstName == firstName select p;
+
+            return lista.ToList();
+
+        }
 
     }
 }
