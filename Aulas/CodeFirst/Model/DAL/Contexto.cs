@@ -9,9 +9,9 @@ namespace CodeFirst.Model.DAL {
         }
 
         //Tabelas que sarão criadas no banco
-        public DbSet<Categoria> Categorias { get; set; }
+        DbSet<Categoria> Categorias { get; set; }
 
-        public DbSet<Produto> Produtos { get; set; }
+        DbSet<Produto> Produtos { get; set; }
 
 
 
